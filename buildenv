@@ -1,0 +1,24 @@
+export ZOPEN_GIT_URL="https://github.com/sqlite/sqlite.git"
+export ZOPEN_GIT_DEPS="git make zoslib"
+export ZOPEN_TARBALL_URL="https://www.sqlite.org/2022/sqlite-autoconf-3400000.tar.gz"
+export ZOPEN_TARBALL_DEPS="tar gzip make zoslib"
+export ZOPEN_TYPE="TARBALL"
+
+export ZOPEN_CHECK="skip" # requires tcl
+
+zopen_check_results()
+{
+  dir="$1"
+  pfx="$2"
+  chk="$1/$2_check.log"
+
+  # Echo the following information to gauge build health
+  echo "actualFailures:0"
+  echo "totalTests:1"
+  echo "expectedFailures:0"
+}
+
+zopen_append_to_env()
+{
+  # echo envars outside of PATH, MANPATH, LIBPATH
+}

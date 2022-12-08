@@ -1,0 +1,21 @@
+diff --git a/configure b/configure
+index 1f9c2c1..cf43852 100755
+--- a/configure
++++ b/configure
+@@ -5687,7 +5687,6 @@ host_os=$*
+ IFS=$ac_save_IFS
+ case $host_os in *\ *) host_os=`echo "$host_os" | sed 's/ /-/g'`;; esac
+ 
+-
+ # Backslashify metacharacters that are still active within
+ # double-quoted strings.
+ sed_quote_subst='s/\(["`$\\]\)/\\\1/g'
+@@ -14586,7 +14585,7 @@ fi
+ #-----------------------------------------------------------------------
+ 
+ ac_fn_c_check_func "$LINENO" "posix_fallocate" "ac_cv_func_posix_fallocate"
+-if test "x$ac_cv_func_posix_fallocate" = xyes
++if test "x$ac_cv_func_posix_fallocate" = xyes && test "$host_os" != "openedition"
+ then :
+   printf "%s\n" "#define HAVE_POSIX_FALLOCATE 1" >>confdefs.h
+ 
