@@ -1,5 +1,5 @@
 diff --git a/configure b/configure
-index 1f9c2c1..cf43852 100755
+index 1016e35..1d944ab 100755
 --- a/configure
 +++ b/configure
 @@ -5687,7 +5687,6 @@ host_os=$*
@@ -10,7 +10,18 @@ index 1f9c2c1..cf43852 100755
  # Backslashify metacharacters that are still active within
  # double-quoted strings.
  sed_quote_subst='s/\(["`$\\]\)/\\\1/g'
-@@ -14586,7 +14585,7 @@ fi
+@@ -6857,6 +6856,10 @@ aix[4-9]*)
+   lt_cv_deplibs_check_method=pass_all
+   ;;
+ 
++openedition*)
++  lt_cv_deplibs_check_method=pass_all
++  ;;
++
+ beos*)
+   lt_cv_deplibs_check_method=pass_all
+   ;;
+@@ -14586,7 +14589,7 @@ fi
  #-----------------------------------------------------------------------
  
  ac_fn_c_check_func "$LINENO" "posix_fallocate" "ac_cv_func_posix_fallocate"

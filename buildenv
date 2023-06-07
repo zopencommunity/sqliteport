@@ -1,6 +1,6 @@
 export ZOPEN_GIT_URL="https://github.com/sqlite/sqlite.git"
 export ZOPEN_GIT_DEPS="git make zoslib"
-export ZOPEN_TARBALL_URL="https://www.sqlite.org/2022/sqlite-autoconf-3400000.tar.gz"
+export ZOPEN_TARBALL_URL="https://www.sqlite.org/2023/sqlite-autoconf-3420000.tar.gz"
 export ZOPEN_TARBALL_DEPS="tar gzip make zoslib"
 export ZOPEN_TYPE="TARBALL"
 
