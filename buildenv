@@ -35,3 +35,8 @@ if [ ! -z "\$ZOPEN_IN_ZOPEN_BUILD" ]; then
 fi
 ZZ
 }
+
+zopen_get_version()
+{
+  ./sqlite3 -version | cut -d" " -f1
+}
