@@ -1,8 +1,13 @@
-export ZOPEN_GIT_URL="https://github.com/sqlite/sqlite.git"
-export ZOPEN_GIT_DEPS="git make zoslib"
-export ZOPEN_TARBALL_URL="https://www.sqlite.org/2023/sqlite-autoconf-3420000.tar.gz"
-export ZOPEN_TARBALL_DEPS="tar gzip make zoslib tcl"
-export ZOPEN_TYPE="TARBALL"
+# bump: sqlite-version /SQLITE_VERSION="(.*)"/ https://sqlite.org/download.html|re:/(\d{4}).sqlite-autoconf-(\d{7})/$1-$2/
+SQLITE_VERSION="2023-3420000"
+SQLITE_YEAR=$(echo $SQLITE_VERSION | cut -d '-' -f 1)
+SQLITE_NUM=$(echo $SQLITE_VERSION | cut -d '-' -f 2)
+
+export ZOPEN_BUILD_LINE="STABLE"
+export ZOPEN_DEV_URL="https://github.com/sqlite/sqlite.git"
+export ZOPEN_DEV_DEPS="git make zoslib"
+export ZOPEN_STABLE_URL="https://www.sqlite.org/${SQLITE_YEAR}/sqlite-autoconf-${SQLITE_NUM}.tar.gz"
+export ZOPEN_STABLE_DEPS="tar gzip make zoslib tcl"
 export ZOPEN_COMP="CLANG"
 
 zopen_check_results()
