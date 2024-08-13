@@ -1,5 +1,5 @@
 # bump: sqlite-version /SQLITE_VERSION="(.*)"/ https://sqlite.org/download.html|re:/(\d{4}).sqlite-autoconf-(\d{7})/$1-$2/
-SQLITE_VERSION="2024-3450100"
+SQLITE_VERSION="2024-3460100"
 SQLITE_YEAR=$(echo $SQLITE_VERSION | cut -d '-' -f 1)
 SQLITE_NUM=$(echo $SQLITE_VERSION | cut -d '-' -f 2)
 
