@@ -2,6 +2,7 @@
 SQLITE_VERSION="2024-3450100"
 SQLITE_YEAR=$(echo $SQLITE_VERSION | cut -d '-' -f 1)
 SQLITE_NUM=$(echo $SQLITE_VERSION | cut -d '-' -f 2)
+export ZOPEN_CATEGORIES="database library"
 
 export ZOPEN_BUILD_LINE="STABLE"
 export ZOPEN_DEV_URL="https://github.com/sqlite/sqlite.git"
